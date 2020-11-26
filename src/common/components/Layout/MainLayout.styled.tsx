@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link, LinkProps } from 'react-router-dom'
-import { BLACK_COLOR, BLACK_LIGHT_COLOR, LIGHT_GREY_COLOR, WHITE_COLOR } from '../../constants/colors'
+import { BLACK_COLOR, BLACK_LIGHT_COLOR, LIGHT_GREY_COLOR, SECONDARY_COLOR, WHITE_COLOR } from '../../constants/colors'
 import { BASE_TEXT_FAMILY } from '../../constants/typography'
 import { highlightStyle, normalizeStyle, selectionStyle, smoothingStyle } from '../Typography/common'
 
@@ -90,10 +90,18 @@ export const SidebarLink = styled(Link)<{ $active?: boolean } & LinkProps>`
   ${smoothingStyle}
   ${selectionStyle}
   
+  svg {
+    transition: fill 0.2s ease-out, stroke 0.2s ease-out;
+    color: ${LIGHT_GREY_COLOR};
+  }
+
   &:hover,
   &:active {
     color: ${WHITE_COLOR};
     background-color: ${BLACK_LIGHT_COLOR};
+    svg {
+      color: ${SECONDARY_COLOR};
+    }
   }
 
   ${({ $active }) =>
@@ -103,6 +111,9 @@ export const SidebarLink = styled(Link)<{ $active?: boolean } & LinkProps>`
         color: ${WHITE_COLOR};
         font-weight: 600;
         background-color: ${BLACK_LIGHT_COLOR};
+        svg {
+          color: ${SECONDARY_COLOR};
+        }
       `
       : ''}
 `

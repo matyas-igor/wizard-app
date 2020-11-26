@@ -2,14 +2,14 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Normalize } from './common/components/Normalize'
 import { BotsRouter } from './bots/BotsRouter'
-import { Layout } from './common/components/Layout/Layout'
+import { MainLayout } from './common/components/Layout'
 
 const App: React.FC = () => {
   return (
     <>
       <Normalize />
       <Router>
-        <Layout>
+        <MainLayout>
           <Switch>
             <Route path="/bots">
               <BotsRouter />
@@ -24,7 +24,7 @@ const App: React.FC = () => {
               <Redirect to="/bots" />
             </Route>
           </Switch>
-        </Layout>
+        </MainLayout>
       </Router>
     </>
   )
