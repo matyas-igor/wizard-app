@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { LIGHT_GREY_COLOR, WHITE_COLOR } from '../../../../common/constants/colors'
 import { Container } from '../../../../common/components/Container'
 import { Card } from '../../../../common/components/Card'

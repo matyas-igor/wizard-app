@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import { css } from 'styled-components/macro'
 import { BLACK_COLOR, SECONDARY_COLOR, WHITE_COLOR } from '../../constants/colors'
 
 export const normalizeStyle = `

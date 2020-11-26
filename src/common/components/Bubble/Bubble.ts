@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { BLACK_COLOR, LIGHT_GREY_COLOR, TERTIARY_COLOR, TERTIARY_DARK_COLOR, WHITE_COLOR } from '../../constants/colors'
 
 // According to: https://codepen.io/swards/pen/gxQmbj

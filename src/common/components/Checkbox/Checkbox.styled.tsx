@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { PRIMARY_COLOR, PRIMARY_DARK_COLOR, WHITE_COLOR } from '../../constants/colors'
 
 export const HiddenCheckbox = styled.input`

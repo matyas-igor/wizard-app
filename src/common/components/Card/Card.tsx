@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { WHITE_COLOR } from '../../constants/colors'
 import { SHADOW_DEFAULT, SHADOW_FOCUSED, SHADOW_PRIMARY_DEFAULT, SHADOW_PRIMARY_FOCUSED } from '../../constants/shadows'
 

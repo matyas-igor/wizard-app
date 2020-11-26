@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components/macro'
 
 // https://necolas.github.io/normalize.css/8.0.1/normalize.css
 export const Normalize = createGlobalStyle`

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { BASE_TEXT_FAMILY } from '../../constants/typography'
 import {
   highlightStyle,

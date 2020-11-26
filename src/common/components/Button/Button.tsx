@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import {
   DISABLED_GREY_COLOR,
   LIGHT_GREY_COLOR,

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { BLACK_COLOR, BLACK_LIGHT_COLOR, LIGHT_GREY_COLOR, SECONDARY_COLOR, WHITE_COLOR } from '../../constants/colors'
 import { BASE_TEXT_FAMILY } from '../../constants/typography'
 import { highlightStyle, normalizeStyle, selectionStyle, smoothingStyle } from '../Typography/common'

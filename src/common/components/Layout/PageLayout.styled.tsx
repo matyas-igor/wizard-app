@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { DARK_GREY_COLOR, INACTIVE_GREY_COLOR, LIGHT_GREY_COLOR, PRIMARY_COLOR } from '../../constants/colors'
+import styled from 'styled-components/macro'
+import { INACTIVE_GREY_COLOR, LIGHT_GREY_COLOR, PRIMARY_COLOR } from '../../constants/colors'
 import { BASE_TEXT_FAMILY } from '../../constants/typography'
 import { normalizeStyle } from '../Typography/common'
 

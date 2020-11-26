@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { PRIMARY_COLOR } from '../../constants/colors'
 
 const StyledSpinner = styled.svg`
