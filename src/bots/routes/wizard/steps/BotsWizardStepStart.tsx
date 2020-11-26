@@ -9,7 +9,7 @@ export const BotsWizardStepStart: React.FC = () => (
     <div>
       <H1 $marginBottom={24}>New chatbot</H1>
       <Base $marginBottom={16}>
-        Welcome to the wizard of new AI chatbots creation! We’re asking you to go through several steps in the process:
+        Welcome to the wizard of new AI Chatbot creation! We’re asking you to go through several steps in the process:
       </Base>
       <Base as={'ul'} $marginBottom={32}>
         <li>

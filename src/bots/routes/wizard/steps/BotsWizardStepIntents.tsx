@@ -28,9 +28,9 @@ export const BotsWizardStepIntents: React.FC = () => {
   const history = useHistory()
 
   const { values, handleChange, setValues, handleSubmit, isSubmitting } = useFormik({
-    initialValues: intents.reduce((acc, intent) => ({ ...acc, [intent.id]: false }), {}),
+    initialValues: { intents: intents.reduce((acc, intent) => ({ ...acc, [intent.id]: false }), {}) },
     onSubmit: async (values) => {
-      const data = { intents: intents.filter((intent) => values[intent.id]).map((intent) => intent.id) }
+      const data = { intents: intents.filter((intent) => values.intents[intent.id]).map((intent) => intent.id) }
       console.log('Form data', data)
 
       if (data.intents.length === 0) {
@@ -47,12 +47,12 @@ export const BotsWizardStepIntents: React.FC = () => {
   })
 
   const amountSelected = useMemo(() => {
-    return intents.reduce((acc, intent) => acc + (values[intent.id] ? 1 : 0), 0)
-  }, [values])
+    return intents.reduce((acc, intent) => acc + (values.intents[intent.id] ? 1 : 0), 0)
+  }, [values.intents])
 
   const isAllSelected = amountSelected === intents.length
   const toggleAllSelected = useCallback(() => {
-    setValues(intents.reduce((acc, intent) => ({ ...acc, [intent.id]: !isAllSelected }), {}))
+    setValues({ intents: intents.reduce((acc, intent) => ({ ...acc, [intent.id]: !isAllSelected }), {}) })
   }, [isAllSelected, setValues])
 
   const [setScrollRef, { isAtBottom }] = useScroll()
@@ -77,7 +77,12 @@ export const BotsWizardStepIntents: React.FC = () => {
               </SelectorWrapper>
               <CardsWrapper>
                 {intents.map((intent: Intent) => (
-                  <CardIntent key={intent.id} checked={values[intent.id]} onChange={handleChange} intent={intent} />
+                  <CardIntent
+                    key={intent.id}
+                    checked={values.intents[intent.id]}
+                    onChange={handleChange}
+                    intent={intent}
+                  />
                 ))}
               </CardsWrapper>
             </div>

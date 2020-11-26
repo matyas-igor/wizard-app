@@ -35,7 +35,7 @@ export const CardIntent: React.FC<Props> = ({
   <Card as={'label'} key={id}>
     <CardWrapper>
       <CheckboxWrapper>
-        <Checkbox id={id} name={id} checked={checked} onChange={onChange} />
+        <Checkbox id={id} name={`intents.${id}`} checked={checked} onChange={onChange} />
       </CheckboxWrapper>
       <ContentWrapper>
         <TextWrapper>
