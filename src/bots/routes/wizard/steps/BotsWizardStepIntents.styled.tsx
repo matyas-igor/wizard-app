@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { LIGHT_GREY_COLOR, WHITE_COLOR } from '../../../../common/constants/colors'
 import { Container } from '../../../../common/components/Container'
 import { Card } from '../../../../common/components/Card'
+import { SHADOW_FOCUSED_UP } from '../../../../common/constants/shadows'
 
 const rowStyle = `
   display: flex;
@@ -70,12 +71,14 @@ export const CardsWrapper = styled.div`
   }
 `
 
-export const SubmitContainer = styled.div`
+export const SubmitContainer = styled.div<{ $atBottom?: boolean }>`
   position: sticky;
   bottom: 0;
   height: auto !important;
-  border-top: 1px solid ${LIGHT_GREY_COLOR};
+  box-shadow: ${({ $atBottom = true }) => ($atBottom ? `0 -1px 0 ${LIGHT_GREY_COLOR}` : SHADOW_FOCUSED_UP)};
   background-color: ${WHITE_COLOR};
+  transition: box-shadow 0.2s ease-out;
+  z-index: 10;
 `
 
 export const SubmitInnerContainer = styled(Container)`

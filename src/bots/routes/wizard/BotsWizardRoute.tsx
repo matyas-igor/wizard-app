@@ -2,9 +2,11 @@ import React from 'react'
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom'
 import { animated, useTransition } from 'react-spring'
 import { Wrapper } from './BotsWizardRoute.styled'
+import { BotsWizardContext } from './context'
 import { BotsWizardStepIntents } from './steps/BotsWizardStepIntents'
 import { BotsWizardStepStart } from './steps/BotsWizardStepStart'
 import { BotsWizardStepFinish } from './steps/BotsWizardStepFinish'
+import { useScroll } from '../../../common/hooks/useScroll'
 
 export const BotsWizardRoute: React.FC = () => {
   const location = useLocation()
@@ -14,28 +16,31 @@ export const BotsWizardRoute: React.FC = () => {
     leave: { opacity: 0, transform: 'translate3d(-35%,0,0)', position: 'absolute', width: '100%', height: '100%' },
     initial: null,
   })
+  const [setScrollRef, { isAtTop, isAtBottom }] = useScroll()
   return (
-    <Wrapper>
-      {transitions.map(({ item: location, props, key }) => (
-        <animated.div key={key} style={props}>
-          <Switch location={location}>
-            <Route exact path="/bots/wizard">
-              <BotsWizardStepStart />
-            </Route>
+    <BotsWizardContext.Provider value={{ isAtTop, isAtBottom }}>
+      <Wrapper ref={setScrollRef}>
+        {transitions.map(({ item: location, props, key }) => (
+          <animated.div key={key} style={props}>
+            <Switch location={location}>
+              <Route exact path="/bots/wizard">
+                <BotsWizardStepStart />
+              </Route>
 
-            <Route path="/bots/wizard/step/intents">
-              <BotsWizardStepIntents />
-            </Route>
+              <Route path="/bots/wizard/step/intents">
+                <BotsWizardStepIntents />
+              </Route>
 
-            <Route path="/bots/wizard/finish">
-              <BotsWizardStepFinish />
-            </Route>
-            <Route path="*">
-              <Redirect to="/bots/wizard" />
-            </Route>
-          </Switch>
-        </animated.div>
-      ))}
-    </Wrapper>
+              <Route path="/bots/wizard/finish">
+                <BotsWizardStepFinish />
+              </Route>
+              <Route path="*">
+                <Redirect to="/bots/wizard" />
+              </Route>
+            </Switch>
+          </animated.div>
+        ))}
+      </Wrapper>
+    </BotsWizardContext.Provider>
   )
 }

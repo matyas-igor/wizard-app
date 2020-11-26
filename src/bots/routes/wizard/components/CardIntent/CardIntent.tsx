@@ -1,22 +1,29 @@
 import React from 'react'
 import {
+  CardWrapper,
+  ChatsWrapper,
+  ChatWrapper,
   CheckboxWrapper,
   ContentWrapper,
   RepliesWrapper,
   TextWrapper,
-  CardWrapper,
-  ChatsWrapper,
-  ChatWrapper,
 } from '../../steps/BotsWizardStepIntents.styled'
 import { Checkbox } from '../../../../../common/components/Checkbox'
 import { H3, Small } from '../../../../../common/components/Typography'
 import { Card } from '../../../../../common/components/Card'
 import { Intent } from '../../types'
 import { CardIntentReply } from './CardIntentReply'
+import { Link } from '../../../../../common/components/Typography/Link'
 
 type Props = Intent
 
-export const CardIntent: React.FC<Props> = ({ id, name, description, reply, trainingData: { expressions } }) => (
+export const CardIntent: React.FC<Props> = ({
+  id,
+  name,
+  description,
+  reply,
+  trainingData: { expressionCount, expressions },
+}) => (
   <Card as={'label'} key={id}>
     <CardWrapper>
       <CheckboxWrapper>
@@ -27,8 +34,11 @@ export const CardIntent: React.FC<Props> = ({ id, name, description, reply, trai
           <H3 as={'span'} $display={'block'} $marginBottom={8}>
             {name}
           </H3>
-          <Small as={'span'} $display={'block'}>
+          <Small as={'span'} $display={'block'} $marginBottom={12}>
             {description}
+          </Small>
+          <Small>
+            <Link>See all {expressionCount} expressions</Link>
           </Small>
         </TextWrapper>
         <RepliesWrapper>

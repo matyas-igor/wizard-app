@@ -6,6 +6,7 @@ export const Link = styled.a`
   text-decoration: none;
   color: ${PRIMARY_COLOR};
   transition: color 0.2s ease-out, transform 0.2s ease-out;
+  cursor: pointer;
   &:hover {
     color: ${PRIMARY_DARK_COLOR};
   }
