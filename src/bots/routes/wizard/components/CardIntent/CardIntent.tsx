@@ -15,19 +15,27 @@ import { Intent } from '../../types'
 import { CardIntentReply } from './CardIntentReply'
 import { Link } from '../../../../../common/components/Typography/Link'
 
-type Props = Intent
+type Props = {
+  checked: boolean
+  onChange: (e: React.ChangeEvent<any>) => void
+  intent: Intent
+}
 
 export const CardIntent: React.FC<Props> = ({
-  id,
-  name,
-  description,
-  reply,
-  trainingData: { expressionCount, expressions },
+  intent: {
+    id,
+    name,
+    description,
+    reply,
+    trainingData: { expressionCount, expressions },
+  },
+  checked,
+  onChange,
 }) => (
   <Card as={'label'} key={id}>
     <CardWrapper>
       <CheckboxWrapper>
-        <Checkbox />
+        <Checkbox id={id} name={id} checked={checked} onChange={onChange} />
       </CheckboxWrapper>
       <ContentWrapper>
         <TextWrapper>

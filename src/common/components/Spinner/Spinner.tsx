@@ -4,9 +4,8 @@ import { PRIMARY_COLOR } from '../../constants/colors'
 
 const StyledSpinner = styled.svg`
   animation: rotate 2s linear infinite;
-  margin: -25px 0 0 -25px;
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   & .path {
     stroke: ${PRIMARY_COLOR};
     stroke-linecap: round;
@@ -34,7 +33,7 @@ const StyledSpinner = styled.svg`
 `
 
 export const Spinner: React.FC = () => (
-  <StyledSpinner viewBox="0 0 50 50">
-    <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="4" />
+  <StyledSpinner viewBox="0 0 32 32">
+    <circle className="path" cx="16" cy="16" r="12" fill="none" strokeWidth="2" />
   </StyledSpinner>
 )

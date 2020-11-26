@@ -92,6 +92,14 @@ export const SubmitInnerContainer = styled(Container)`
   align-items: center;
 `
 
+export const SpinnerWrapper = styled.div`
+  position: relative;
+  width: 32px;
+  height: 32px;
+  justify-self: flex-end;
+  margin-left: auto;
+`
+
 export const ChatsWrapper = styled.span`
   ${rowStyle};
   margin: 0 -12px;
@@ -102,4 +110,15 @@ export const ChatWrapper = styled.span`
   max-width: calc(100% / 3);
   flex-basis: calc(100% / 3);
   padding: 0 12px;
+`
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
 `
