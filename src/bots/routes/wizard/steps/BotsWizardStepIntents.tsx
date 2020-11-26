@@ -2,7 +2,6 @@ import React from 'react'
 import { Base, H1 } from '../../../../common/components/Typography'
 import { Checkbox } from '../../../../common/components/Checkbox'
 import { Button } from '../../../../common/components/Button'
-import { Link } from 'react-router-dom'
 import { Container } from '../../../../common/components/Container'
 import { WithIconAtLeft } from '../../../../common/components/WithIcon'
 import intents from '../fixtures/intents.json'
@@ -30,9 +29,7 @@ export const BotsWizardStepIntents: React.FC = () => (
     </Container>
     <SubmitContainer>
       <SubmitInnerContainer>
-        <Button as={Link} to={'/bots/wizard/finish'}>
-          Continue
-        </Button>
+        <Button disabled>Continue</Button>
       </SubmitInnerContainer>
     </SubmitContainer>
   </>

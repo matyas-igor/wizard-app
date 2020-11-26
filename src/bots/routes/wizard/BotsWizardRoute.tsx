@@ -11,7 +11,7 @@ export const BotsWizardRoute: React.FC = () => {
   const transitions = useTransition(location, (location) => location.pathname, {
     from: { opacity: 0, transform: 'translate3d(50%,0,0)' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    leave: { opacity: 0, transform: 'translate3d(-25%,0,0)', position: 'absolute', width: '100%', height: '100%' },
+    leave: { opacity: 0, transform: 'translate3d(-35%,0,0)', position: 'absolute', width: '100%', height: '100%' },
     initial: null,
   })
   return (
