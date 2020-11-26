@@ -10,7 +10,6 @@ export const Chip = styled.span`
   border: none;
   cursor: pointer;
   position: relative;
-  white-space: nowrap;
   vertical-align: middle;
   margin: -6px 0;
   padding: 6px 20px;
@@ -27,7 +26,7 @@ export const Chip = styled.span`
   font-weight: 700;
 
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
 
   color: ${PRIMARY_COLOR};
   background-color: ${LIGHT_GREY_COLOR};

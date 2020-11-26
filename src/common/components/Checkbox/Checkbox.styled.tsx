@@ -23,7 +23,7 @@ export const StyledCheckbox = styled.span`
   background-color: ${WHITE_COLOR};
   border-radius: 4px;
   transition: background-color 0.2s ease-out;
-  box-shadow: 0 0 0 2px inset ${PRIMARY_COLOR};
+  box-shadow: inset 0 0 0 2px ${PRIMARY_COLOR};
   svg {
     visibility: hidden;
   }
@@ -42,7 +42,7 @@ export const CheckboxContainer = styled.label`
   }
 
   ${HiddenCheckbox}:focus + ${StyledCheckbox} {
-    box-shadow: 0 0 0 2px inset ${PRIMARY_DARK_COLOR};
+    box-shadow: inset 0 0 0 2px ${PRIMARY_DARK_COLOR};
   }
 
   &:hover {
@@ -50,7 +50,7 @@ export const CheckboxContainer = styled.label`
       background-color: ${PRIMARY_DARK_COLOR};
     }
     ${HiddenCheckbox}:not(:checked) + ${StyledCheckbox} {
-      box-shadow: 0 0 0 2px inset ${PRIMARY_DARK_COLOR};
+      box-shadow: inset 0 0 0 2px ${PRIMARY_DARK_COLOR};
     }
   }
 `
