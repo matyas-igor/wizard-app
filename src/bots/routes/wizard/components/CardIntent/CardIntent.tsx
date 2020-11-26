@@ -16,7 +16,7 @@ import { CardIntentReply } from './CardIntentReply'
 import { Link } from '../../../../../common/components/Typography/Link'
 
 type Props = {
-  checked: boolean
+  checked?: boolean
   onChange: (e: React.ChangeEvent<any>) => void
   intent: Intent
 }
@@ -29,10 +29,10 @@ export const CardIntent: React.FC<Props> = ({
     reply,
     trainingData: { expressionCount, expressions },
   },
-  checked,
+  checked = false,
   onChange,
 }) => (
-  <Card as={'label'} key={id}>
+  <Card $checked={checked} as={'label'} key={id}>
     <CardWrapper>
       <CheckboxWrapper>
         <Checkbox id={id} name={`intents.${id}`} checked={checked} onChange={onChange} />
