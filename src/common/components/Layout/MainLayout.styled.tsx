@@ -99,8 +99,7 @@ export const SidebarLink = styled.a<{ $active?: boolean }>`
 
   &:hover,
   &:active {
-    color: ${WHITE_COLOR};
-    background-color: ${BLACK_LIGHT_COLOR};
+    color: ${SECONDARY_COLOR};
     svg {
       color: ${SECONDARY_COLOR};
     }
@@ -110,11 +109,10 @@ export const SidebarLink = styled.a<{ $active?: boolean }>`
     $active
       ? `
         cursor: default;
-        color: ${WHITE_COLOR};
+        color: ${WHITE_COLOR} !important;
         font-weight: 600;
-        background-color: ${BLACK_LIGHT_COLOR};
         svg {
-          color: ${SECONDARY_COLOR};
+          color: ${SECONDARY_COLOR} !important;
         }
       `
       : ''}
