@@ -13,7 +13,8 @@ import { H3, Small } from '../../../../../common/components/Typography'
 import { Card } from '../../../../../common/components/Card'
 import { Intent } from '../../types'
 import { CardIntentReply } from './CardIntentReply'
-import { Link } from '../../../../../common/components/Typography/Link'
+import { Chip } from '../../../../../common/components/Chip'
+import { ChipWrapper } from './CardIntent.styled'
 
 type Props = {
   checked?: boolean
@@ -45,9 +46,15 @@ export const CardIntent: React.FC<Props> = ({
           <Small as={'span'} $display={'block'} $marginBottom={12}>
             {description}
           </Small>
-          <Small>
-            <Link>See all {expressionCount} expressions</Link>
-          </Small>
+          <ChipWrapper>
+            <Chip
+              onClick={(e) => {
+                e.preventDefault()
+              }}
+            >
+              See all {expressionCount} expressions
+            </Chip>
+          </ChipWrapper>
         </TextWrapper>
         <RepliesWrapper>
           <ChatsWrapper>
