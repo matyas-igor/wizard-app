@@ -113,6 +113,7 @@ export const ChatWrapper = styled.span`
 `
 
 export const Form = styled.form`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -121,4 +122,16 @@ export const Form = styled.form`
   flex-shrink: 1;
   margin: 0;
   padding: 0;
+`
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
 `
