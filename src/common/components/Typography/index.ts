@@ -1,4 +1,5 @@
 export { Base } from './Base'
 export { Small } from './Small'
+export { ExtraSmall } from './ExtraSmall'
 export { H1 } from './H1'
 export { H3 } from './H3'

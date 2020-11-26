@@ -11,7 +11,6 @@ export const Container = styled.div<{ $center?: boolean }>`
   box-sizing: border-box;
   padding: 48px 32px;
   max-width: 100%;
-  overflow: auto;
 
   @media (min-width: 992px) {
     width: 992px;

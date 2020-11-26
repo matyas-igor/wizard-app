@@ -12,6 +12,11 @@ An example application of bots creation inside admin panel
 - Tested only in Chrome on desktops
 - No backend API connected or simulated
   - No loader used or displayed
+- No pagination used
+
+## Notes
+
+- For form state management `formik` is used although it can be replaced with simple state
  
 ---
 

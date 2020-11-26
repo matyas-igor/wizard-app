@@ -27,12 +27,23 @@ export const selectionStyle = `
   }
 `
 
-export type TypographyProps = { $color?: string; $align?: string; $marginBottom?: number; $marginTop?: number }
+export type TypographyProps = {
+  $color?: string
+  $align?: string
+  $marginBottom?: number
+  $marginTop?: number
+  $marginLeft?: number
+  $marginRight?: number
+  $display?: string
+}
 
 export const typographyMixin = css<TypographyProps>`
+  transition: color 0.2s ease-out;
   color: ${({ $color = BLACK_COLOR }) => $color};
   text-align: ${({ $align = 'left' }) => $align};
   margin-top: ${({ $marginTop = 0 }) => $marginTop}px;
   margin-bottom: ${({ $marginBottom = 0 }) => $marginBottom}px;
-  transition: color 0.2s ease-out;
+  margin-left: ${({ $marginLeft = 0 }) => $marginLeft}px;
+  margin-right: ${({ $marginRight = 0 }) => $marginRight}px;
+  ${({ $display }) => ($display ? `display: ${$display};` : '')}
 `

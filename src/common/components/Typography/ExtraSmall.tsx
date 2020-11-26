@@ -9,12 +9,12 @@ import {
   TypographyProps,
 } from './common'
 
-export const Small = styled.p<{ $strong?: boolean } & TypographyProps>`
+export const ExtraSmall = styled.p<{ $strong?: boolean } & TypographyProps>`
   font-family: ${BASE_TEXT_FAMILY};
   font-weight: ${({ $strong = false }) => ($strong ? '600' : '400')};
 
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 20px;
 
   ${typographyMixin}
 

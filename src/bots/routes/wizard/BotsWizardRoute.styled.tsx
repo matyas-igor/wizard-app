@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Container } from '../../../common/components/Container'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -7,7 +8,8 @@ export const Wrapper = styled.div`
   & > * {
     height: 100%;
   }
-  & > * > * {
+  & > ${Container} {
     height: 100%;
   }
+  overflow: auto;
 `
