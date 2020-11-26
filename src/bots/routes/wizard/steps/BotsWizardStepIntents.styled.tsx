@@ -23,7 +23,7 @@ const colStyle = `
 `
 
 export const SelectorWrapper = styled.div`
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 `
 
 export const CardWrapper = styled.span`

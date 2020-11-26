@@ -13,9 +13,9 @@ export const Container = styled.div<{ $center?: boolean }>`
   max-width: 100%;
 
   @media (min-width: 992px) {
-    width: 992px;
+    width: 772px;
   }
   @media (min-width: 1440px) {
-    width: 1440px;
+    width: 1220px;
   }
 `

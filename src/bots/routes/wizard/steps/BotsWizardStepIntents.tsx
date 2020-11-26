@@ -18,7 +18,10 @@ export const BotsWizardStepIntents: React.FC = () => {
       <Container>
         <div>
           <H1 $marginBottom={24}>Intents</H1>
-          <Base $marginBottom={24}>Please select intents your new AI chatbot will going to support.</Base>
+          <Base $marginBottom={24}>
+            Please select intents your new AI chatbot will going to support. More you select – more chatbot features
+            will be supported.
+          </Base>
           <SelectorWrapper>
             <Base as={'label'} $strong style={{ cursor: 'pointer' }}>
               <WithIconAtLeft icon={<Checkbox />}>Select all</WithIconAtLeft>
