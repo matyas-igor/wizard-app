@@ -13,20 +13,25 @@ export const ContentWrapper = styled.span`
   flex-shrink: 0;
 `
 
-export const IconLeftWrapper = styled.span<{ $size: number; $margin: number }>`
+const IconWrapper = styled.span<{ $size: number }>`
   display: inline-flex;
   flex-grow: 0;
   flex-shrink: 0;
   width: ${({ $size }) => $size}px;
-  height: ${({ $size }) => $size}px;
+  height: 0;
+  position: relative;
+  & > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+`
+
+export const IconLeftWrapper = styled(IconWrapper)<{ $size: number; $margin: number }>`
   margin-right: ${({ $margin }) => $margin}px;
 `
 
-export const IconRightWrapper = styled.span<{ $size: number; $margin: number }>`
-  display: inline-flex;
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: ${({ $size }) => $size}px;
-  height: ${({ $size }) => $size}px;
+export const IconRightWrapper = styled(IconWrapper)<{ $size: number; $margin: number }>`
   margin-left: ${({ $margin }) => $margin}px;
 `

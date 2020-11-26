@@ -4,6 +4,7 @@ An example application of bots creation inside admin panel
 
 - Uses [`react`](https://reactjs.org/) together with [`styled-components`](https://styled-components.com/)
 - Bootsrapped with `create-react-app` and `typescript`
+- Icons taken from [`glyphs.fyi`](https://glyphs.fyi/)
 
 ## Limitations
 

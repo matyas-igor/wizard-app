@@ -7,7 +7,7 @@ type Props = {
   margin?: number
 }
 
-export const WithIconAtLeft: React.FC<Props> = ({ children, icon, size = 24, margin = 8 }) => (
+export const WithIconAtLeft: React.FC<Props> = ({ children, icon, size = 24, margin = 12 }) => (
   <Wrapper>
     <IconLeftWrapper $size={size} $margin={margin}>
       {icon}

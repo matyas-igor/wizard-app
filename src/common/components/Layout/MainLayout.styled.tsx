@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link, LinkProps } from 'react-router-dom'
 import { BLACK_COLOR, BLACK_LIGHT_COLOR, LIGHT_GREY_COLOR, SECONDARY_COLOR, WHITE_COLOR } from '../../constants/colors'
 import { BASE_TEXT_FAMILY } from '../../constants/typography'
 import { highlightStyle, normalizeStyle, selectionStyle, smoothingStyle } from '../Typography/common'
@@ -27,18 +26,21 @@ export const Sidebar = styled.div`
 `
 
 export const Content = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-grow: 1;
   flex-shrink: 1;
 `
 
-export const LogoLink = styled(Link)<LinkProps>`
+export const LogoLink = styled.a`
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: 60px;
+  height: 80px;
   width: 100%;
 
   box-sizing: border-box;
@@ -67,16 +69,16 @@ export const SidebarLinksWrapper = styled.div`
   flex-shrink: 1;
 `
 
-export const SidebarLink = styled(Link)<{ $active?: boolean } & LinkProps>`
-  display: block;
+export const SidebarLink = styled.a<{ $active?: boolean }>`
+  display: flex;
   width: 100%;
   text-decoration: none;
 
   font-family: ${BASE_TEXT_FAMILY};
   font-weight: 400;
 
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 26px;
 
   color: ${LIGHT_GREY_COLOR};
   transition: color 0.2s ease-out, background-color 0.2s ease-out;

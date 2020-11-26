@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import {
   Content,
   LogoLink,
@@ -23,23 +23,24 @@ export const MainLayout: React.FC = ({ children }) => {
   return (
     <Wrapper>
       <Sidebar>
-        <LogoLink to={'/'}>
+        <LogoLink as={Link} to={'/'}>
           <Logo title="Logo" />
         </LogoLink>
         <SidebarLinksWrapper>
           <div>
-            <SidebarLink $active={pathname.startsWith('/dashboard')} to={'/dashboard'}>
+            <SidebarLink as={Link} $active={pathname.startsWith('/dashboard')} to={'/dashboard'}>
               <WithIconAtLeft icon={<DashboardIcon width={24} height={24} />}>Dashboard</WithIconAtLeft>
             </SidebarLink>
-            <SidebarLink $active={pathname.startsWith('/bots')} to={'/bots'}>
-              <WithIconAtLeft icon={<PuzzleIcon width={24} height={24} />}>Bots</WithIconAtLeft>
+            <SidebarLink as={Link} $active={pathname.startsWith('/bots')} to={'/bots'}>
+              <WithIconAtLeft icon={<PuzzleIcon width={24} height={24} />}>Chatbots</WithIconAtLeft>
             </SidebarLink>
-            <SidebarLink $active={pathname.startsWith('/statistics')} to={'/statistics'}>
+            <SidebarLink as={Link} $active={pathname.startsWith('/statistics')} to={'/statistics'}>
               <WithIconAtLeft icon={<ChartIcon width={24} height={24} />}>Statistics</WithIconAtLeft>
             </SidebarLink>
           </div>
+
           <div>
-            <SidebarLink $active={pathname.startsWith('/help')} to={'/help'}>
+            <SidebarLink as={Link} $active={pathname.startsWith('/help')} to={'/help'}>
               <WithIconAtLeft icon={<SupportIcon width={24} height={24} />}>Help</WithIconAtLeft>
             </SidebarLink>
             <SidebarBlock>

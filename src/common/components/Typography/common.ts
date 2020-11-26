@@ -1,4 +1,5 @@
-import { SECONDARY_COLOR, WHITE_COLOR } from '../../constants/colors'
+import { css } from 'styled-components'
+import { BLACK_COLOR, SECONDARY_COLOR, WHITE_COLOR } from '../../constants/colors'
 
 export const normalizeStyle = `
   letter-spacing: 0;
@@ -24,4 +25,14 @@ export const selectionStyle = `
     color: ${WHITE_COLOR};
     background-color: ${SECONDARY_COLOR};
   }
+`
+
+export type TypographyProps = { $color?: string; $align?: string; $marginBottom?: number; $marginTop?: number }
+
+export const typographyMixin = css<TypographyProps>`
+  color: ${({ $color = BLACK_COLOR }) => $color};
+  text-align: ${({ $align = 'left' }) => $align};
+  margin-top: ${({ $marginTop = 0 }) => $marginTop}px;
+  margin-bottom: ${({ $marginBottom = 0 }) => $marginBottom}px;
+  transition: color 0.2s ease-out;
 `
