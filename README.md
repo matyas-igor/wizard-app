@@ -1,6 +1,6 @@
 # 🧙‍♂️Wizard Bot Application
 
-An example application of bots creation inside admin panel.
+An example application of bots creation inside admin panel
 
 - Uses [`react`](https://reactjs.org/) together with [`styled-components`](https://styled-components.com/)
 - Bootsrapped with `create-react-app` and `typescript`
@@ -10,6 +10,7 @@ An example application of bots creation inside admin panel.
 - Not optimized for mobile devices
 - Tested only in Chrome on desktops
 - No backend API connected or simulated
+  - No loader used or displayed
  
 ---
 
