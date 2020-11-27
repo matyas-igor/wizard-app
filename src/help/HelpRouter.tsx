@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import { PageLayout } from '../common/components/Layout'
 import { AppContext } from '../context'
-import { Small } from '../common/components/Typography'
+import { Base, H1 } from '../common/components/Typography'
 import { INACTIVE_GREY_COLOR } from '../common/constants/colors'
 
 export const HelpRouter: React.FC = () => {
@@ -11,16 +11,18 @@ export const HelpRouter: React.FC = () => {
     <Switch>
       <Route exact path="/help">
         <PageLayout
-          center
           breadcrumbs={[
             { to: '/dashboard', name: 'Dashboard' },
             { to: '/help', name: 'Help', active: true },
           ]}
           user={user}
         >
-          <Small $color={INACTIVE_GREY_COLOR} $align={'center'}>
-            Page is under construction
-          </Small>
+          <div>
+            <H1 $marginBottom={24}>Help</H1>
+            <Base $color={INACTIVE_GREY_COLOR} $marginBottom={32}>
+              Page is under construction
+            </Base>
+          </div>
         </PageLayout>
       </Route>
       <Route path="*">

@@ -30,6 +30,7 @@ export const BotsWizardRoute: React.FC = () => {
             <Route path="/bots/wizard/finish">
               <BotsWizardStepFinish />
             </Route>
+
             <Route path="*">
               <Redirect to="/bots/wizard" />
             </Route>
