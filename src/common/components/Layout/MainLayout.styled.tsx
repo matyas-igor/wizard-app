@@ -56,7 +56,7 @@ export const LogoLink = styled.a`
   }
 
   svg {
-    fill: ${WHITE_COLOR};
+    width: 100%;
   }
 `
 
