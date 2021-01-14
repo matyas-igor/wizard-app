@@ -12,9 +12,9 @@ Live demo: https://wizard-app.netlify.app/
 
 ## Screenshots
 
-![Screen Shot 2020-11-26 at 23 34 23](https://user-images.githubusercontent.com/3536796/100390291-1f805680-3030-11eb-933e-7ecc9d5770ff.png)
+![Screen Shot 2021-01-14 at 15 15 04](https://user-images.githubusercontent.com/3536796/104589831-be0d5900-566a-11eb-95f3-31bd56083e32.png)
 
-![Screen Shot 2020-11-26 at 23 35 39](https://user-images.githubusercontent.com/3536796/100390333-4179d900-3030-11eb-97e4-6a47e2b99d2b.png)
+![Screen Shot 2021-01-14 at 15 15 18](https://user-images.githubusercontent.com/3536796/104589876-ce253880-566a-11eb-8c23-a0982b7d32d9.png)
 
 ## Limitations
 
